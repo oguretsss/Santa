@@ -1,0 +1,10 @@
+d:\VSProjects\Santa\bin\Debug\netcoreapp2.0\Santa.deps.json
+d:\VSProjects\Santa\bin\Debug\netcoreapp2.0\Santa.runtimeconfig.json
+d:\VSProjects\Santa\bin\Debug\netcoreapp2.0\Santa.runtimeconfig.dev.json
+d:\VSProjects\Santa\bin\Debug\netcoreapp2.0\Santa.dll
+d:\VSProjects\Santa\bin\Debug\netcoreapp2.0\Santa.pdb
+d:\VSProjects\Santa\obj\Debug\netcoreapp2.0\Santa.csproj.CoreCompileInputs.cache
+d:\VSProjects\Santa\obj\Debug\netcoreapp2.0\Santa.AssemblyInfoInputs.cache
+d:\VSProjects\Santa\obj\Debug\netcoreapp2.0\Santa.AssemblyInfo.cs
+d:\VSProjects\Santa\obj\Debug\netcoreapp2.0\Santa.dll
+d:\VSProjects\Santa\obj\Debug\netcoreapp2.0\Santa.pdb

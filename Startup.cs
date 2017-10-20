@@ -22,7 +22,7 @@ namespace Santa
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<IPartyRepository, FakePartyRepository>();
+            services.AddTransient<IPartyRepository, MobileContext>();
             services.AddMvc();
         }
 
@@ -44,7 +44,7 @@ namespace Santa
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Party}/{action=List}/{id?}");
             });
             app.UseStatusCodePages();
             app.UseMvcWithDefaultRoute();

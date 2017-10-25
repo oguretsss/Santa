@@ -13,6 +13,11 @@ namespace Santa.Models
         IMongoDatabase database; // база данных
         IGridFSBucket gridFS;   // файловое хранилище
 
+        public IMongoCollection<Party> Parties 
+        {
+            get { return database.GetCollection<Party>("Parties"); }
+        }
+
         public MobileContext()
         {
             // строка подключения
@@ -28,14 +33,27 @@ namespace Santa.Models
 
         public void Create(Party p)
         {
-            database.GetCollection<Party>("Parties").InsertOne(p);
+            Parties.InsertOne(p);
         }
 
         public void CreateMany(IEnumerable<Party> ps)
         {
-            database.GetCollection<Party>("Parties").InsertMany(ps);
+            Parties.InsertMany(ps);
         }
 
-        public IEnumerable<Party> parties => database.GetCollection<Party>("Parties").Find(a => true).ToList();
+    public Party GetParty(string id)
+    {
+      return Parties.Find(a => a.Party_id.ToString() == id).First();
+    }
+
+    public void Update(Party item)
+    {
+    }
+
+    public void Delete(string id)
+    {
+    }
+
+    public IEnumerable<Party> parties => Parties.Find(a => true).ToList();
   }
 }

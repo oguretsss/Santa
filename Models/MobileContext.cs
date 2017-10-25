@@ -26,6 +26,16 @@ namespace Santa.Models
             gridFS = new GridFSBucket(database);
         }
 
-    IEnumerable<Party> IPartyRepository.parties => database.GetCollection<Party>("Parties").Find(a => true).ToList();
+        public void Create(Party p)
+        {
+            database.GetCollection<Party>("Parties").InsertOne(p);
+        }
+
+        public void CreateMany(IEnumerable<Party> ps)
+        {
+            database.GetCollection<Party>("Parties").InsertMany(ps);
+        }
+
+        public IEnumerable<Party> parties => database.GetCollection<Party>("Parties").Find(a => true).ToList();
   }
 }

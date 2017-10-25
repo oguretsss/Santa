@@ -1,9 +1,5 @@
 @model IEnumerable<Party>
 
 @foreach (var p in Model) {
-  <div>
-    <h3>@p.Name</h3>
-    <p>@p.Description</p>
-    <p><b>Creator: </b>@p.CreatorID</P>
-  </div>
+  <div>@Html.Partial("PartySummary", p)</div>
 } 

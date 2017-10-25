@@ -44,10 +44,11 @@ namespace Santa
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Party}/{action=List}/{id?}");
+                    template: "{controller=Party}/{action=List}/{creatorId?}");
             });
             app.UseStatusCodePages();
             app.UseMvcWithDefaultRoute();
+            DBPopulate.EnsurePopulateDB(app);
         }
     }
 }

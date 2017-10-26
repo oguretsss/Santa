@@ -1,0 +1,24 @@
+@model Party
+@{
+  ViewBag.Title = "Edit Party";
+}
+
+<form asp-action="CreateParty" method="POST">
+  <input type="hidden" asp-for="Party_id"/>
+  <div class="form-group">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" class="form-control"/>
+  </div>
+  <div class="form-group">
+    <label asp-for="Description"></label>
+    <input asp-for="Description" class="form-control"/>
+  </div>
+  <div class="form-group">
+    <label asp-for="CreatorID"></label>
+    <input asp-for="CreatorID" class="form-control"/>
+  </div>
+  <div class="text-center">
+    <button class="btn btn-primary" type="submit">Save</button>
+    <a asp-action="List" class="btn btn-default">Cancel</a>
+  </div> 
+</form>

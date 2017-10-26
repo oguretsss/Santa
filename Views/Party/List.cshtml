@@ -3,3 +3,5 @@
 @foreach (var p in Model) {
   <div>@Html.Partial("PartySummary", p)</div>
 } 
+
+<a asp-controller="Party" asp-action="List" class="btn btn-success">Show All</a>

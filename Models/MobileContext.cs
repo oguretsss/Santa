@@ -33,6 +33,7 @@ namespace Santa.Models
 
         public void Create(Party p)
         {
+            p.CreationDate = DateTime.Now;
             Parties.InsertOne(p);
         }
 

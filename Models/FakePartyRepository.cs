@@ -19,6 +19,21 @@ namespace Santa.Models{
     {
       throw new NotImplementedException();
     }
+
+    public void Delete(string id)
+    {
+      throw new NotImplementedException();
+    }
+
+    public Party GetParty(string id)
+    {
+      throw new NotImplementedException();
+    }
+
+    public void Update(Party item)
+    {
+      throw new NotImplementedException();
+    }
   }
 }
     

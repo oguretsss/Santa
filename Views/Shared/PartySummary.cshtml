@@ -1,0 +1,15 @@
+@model Party
+<div class="well">
+  <h3>
+    <span class="pull-right label label-primary">
+      @Model.Party_id.ToString()
+    </span>
+    <strong>@Model.Name</strong>
+    <span class="pull-right label label-warning">
+      <a asp-controller="Party" asp-action="ListByCreator" asp-route-creatorId=@Model.CreatorID>@Model.CreatorID</a>
+    </span>
+  </h3>
+  <p><b>Created: </b>@Model.CreationDate</P>
+  <p><b>Will be drawn: </b>@Model.DrawDate</P>
+  <p class="lead">@Model.Description</p>
+</div> 

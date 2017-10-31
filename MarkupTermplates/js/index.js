@@ -1,4 +1,3 @@
-﻿// Write your JavaScript code.
 function showHiddenElement(eName) {
   return function() {
     if ($(eName).is( ":hidden" )) {
